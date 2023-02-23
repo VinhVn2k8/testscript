@@ -9130,19 +9130,19 @@ end)
 
 Stats:Seperator("Fake Mode")
 	
-	Stats:Textbox("Fake Level",true,function(value)
+Stats:Textbox("Fake Level",true,function(value)
         game:GetService("Players").LocalPlayer.Data.Level.Value = value
     end)
-    Stats:Textbox("Fake Exp",true,function(value)
+Stats:Textbox("Fake Exp",true,function(value)
         game:GetService("Players").LocalPlayer.Data.Exp.Value = value
     end)
-    Stats:Textbox("Fake Beli",true,function(value)
+Stats:Textbox("Fake Beli",true,function(value)
         game:GetService("Players").LocalPlayer.Data.Beli.Value = value
     end)
-    Stats:Textbox("Fake Points",true,function(value)
+Stats:Textbox("Fake Points",true,function(value)
         game:GetService("Players").LocalPlayer.Data.Points.Value = value
     end)
-    Stats:Textbox("Fake Bounty",true,function(value)
+Stats:Textbox("Fake Bounty",true,function(value)
         game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value = value
     end)
 
