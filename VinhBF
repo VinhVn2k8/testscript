@@ -122,7 +122,7 @@ local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Pla
 function Update:Window(text,logo,keybind)
 	local uihide = false
 	local abc = false
-	local logo = logo or 12511245920
+	local logo = logo or 11257882652
 	local currentpage = ""
 	local keybind = keybind or Enum.KeyCode.RightControl
 	local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
@@ -186,7 +186,7 @@ Logo.Image = "rbxassetid://11257882652"
 	Hub.Position = UDim2.new(0, 150, 0, 0)
 	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
-	Hub.Text = "Blox Fruit Update 18"
+	Hub.Text = " Blox Fruit Update 18"
 	Hub.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Hub.TextSize = 14.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
@@ -1155,7 +1155,7 @@ ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Position = UDim2.new(0, -5, 0, -5)
 ImageLabel.Size = UDim2.new(0, 45, 0, 45)
-ImageLabel.Image = "rbxassetid://12511245920"
+ImageLabel.Image = "rbxassetid://11257882652"
 ImageLabel.ImageColor3 = Color3.fromRGB(224,224,224)
 
 Space.Name = "Space"
@@ -4226,7 +4226,7 @@ local Stats = Library:Tab("Chỉ số","rbxassetid://11447069304")
 local P = Library:Tab("PVP","rbxassetid://11446900930")
 local Teleport = Library:Tab("Dịch chuyển","rbxassetid://11446920523")
 local Dungeon = Library:Tab("Raid","rbxassetid://11446957539")
-local DevilFruit = Library:Tab("Esp","rbxassetid://11446965348")
+local DevilFruit = Library:Tab("Fruit+Esp","rbxassetid://11446965348")
 local Shop = Library:Tab("Shop","rbxassetid://6031265976")
 local Misc = Library:Tab("Misc","rbxassetid://11447063791")
 local Op = Library:Tab("Trạng thái", "rbxassetid://7040410130")
@@ -9128,24 +9128,6 @@ _G.Point = value
 return "Point : " .. tostring(value)
 end)
 
-Stats:Seperator("Fake Mode")
-	
-Stats:Textbox("Fake Level",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Level.Value = value
-    end)
-Stats:Textbox("Fake Exp",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Exp.Value = value
-    end)
-Stats:Textbox("Fake Beli",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Beli.Value = value
-    end)
-Stats:Textbox("Fake Points",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Points.Value = value
-    end)
-Stats:Textbox("Fake Bounty",true,function(value)
-        game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value = value
-    end)
-
 P:Seperator(" Combats ")
 
 P:Slider("Select Size Fov",1,1000,200,function(value)
@@ -10653,7 +10635,7 @@ if World2 then
 			UpdateChestChams() 
 		end
 	end)
-	DevilFruit:Toggle("ESP Devil Fruit",false,function(a)
+	DevilFruit:Toggle("ESP Devil Fruit",true,function(a)
 		DevilFruitESP = a
 		while DevilFruitESP do wait()
 			UpdateDevilChams() 
@@ -11088,8 +11070,7 @@ Misc:Toggle("Dodge No Cooldown",false,function(value)
         end
     end)
     
-    Misc:Toggle("Infinite 
- Range",getgenv().InfiniteObRange,function(value)
+    Misc:Toggle("Infinite Obversation Range",getgenv().InfiniteObRange,function(value)
         getgenv().InfiniteObRange = value
         local VS = game:GetService("Players").LocalPlayer.VisionRadius.Value
         while getgenv().InfiniteObRange do
