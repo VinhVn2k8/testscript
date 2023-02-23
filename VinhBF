@@ -4226,7 +4226,7 @@ local Stats = Library:Tab("Chỉ số","rbxassetid://11447069304")
 local P = Library:Tab("PVP","rbxassetid://11446900930")
 local Teleport = Library:Tab("Dịch chuyển","rbxassetid://11446920523")
 local Dungeon = Library:Tab("Raid","rbxassetid://11446957539")
-local DevilFruit = Library:Tab("Fruit+Esp","rbxassetid://11446965348")
+local DevilFruit = Library:Tab("Esp","rbxassetid://11446965348")
 local Shop = Library:Tab("Shop","rbxassetid://6031265976")
 local Misc = Library:Tab("Misc","rbxassetid://11447063791")
 local Op = Library:Tab("Trạng thái", "rbxassetid://7040410130")
@@ -9130,21 +9130,25 @@ end)
 
 Stats:Seperator("Fake Mode")
 	
-	Stats:Textbox("Fake Level",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Level.Value = value
-    end)
-    Stats:Textbox("Fake Exp",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Exp.Value = value
-    end)
-    Stats:Textbox("Fake Beli",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Beli.Value = value
-    end)
-    Stats:Textbox("Fake Points",true,function(value)
-        game:GetService("Players").LocalPlayer.Data.Points.Value = value
-    end)
-    Stats:Textbox("Fake Bounty",true,function(value)
-        game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value = value
-    end)
+Stats:Textbox("Fake Level",true,function(value)
+  game:GetService("Players").LocalPlayer.Data.Level.Value = value
+  end)
+
+ Stats:Textbox("Fake Exp",true,function(value)
+  game:GetService("Players").LocalPlayer.Data.Exp.Value = value
+  end)
+
+Stats:Textbox("Fake Beli",true,function(value)
+  game:GetService("Players").LocalPlayer.Data.Beli.Value = value
+  end)
+
+Stats:Textbox("Fake Points",true,function(value)
+  game:GetService("Players").LocalPlayer.Data.Points.Value = value
+  end)
+
+Stats:Textbox("Fake Bounty",true,function(value)
+  game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value = value
+  end)
 
 P:Seperator(" Combats ")
 
