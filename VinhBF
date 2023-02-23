@@ -33,7 +33,7 @@ local ThunderImageUI = Instance.new("ImageLabel")
         ThunderImageUI.BorderSizePixel = 0
         ThunderImageUI.Position = UDim2.new(0.0, 0, 0.0, 0)
         ThunderImageUI.Size = UDim2.new(0, 50, 0, 50)
-        ThunderImageUI.Image = "http://www.roblox.com/asset/?id=11257882652"
+        ThunderImageUI.Image = "http://www.roblox.com/asset/?id=12511245920"
 
 local SOMEXHUB = {}
 local UserInputService = game:GetService("UserInputService")
@@ -122,7 +122,7 @@ local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Pla
 function Update:Window(text,logo,keybind)
 	local uihide = false
 	local abc = false
-	local logo = logo or 11257882652
+	local logo = logo or 12511245920
 	local currentpage = ""
 	local keybind = keybind or Enum.KeyCode.RightControl
 	local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
@@ -164,7 +164,7 @@ function Update:Window(text,logo,keybind)
  Logo.BackgroundTransparency = 1.000
  Logo.Position = UDim2.new(-0.01, 0,-0.170, 0)
  Logo.Size = UDim2.new(0, 55,0, 45)
-Logo.Image = "rbxassetid://11257882652"
+Logo.Image = "rbxassetid://12511245920"
 
 	local Name = Instance.new("TextLabel")
 	Name.Name = "Name"
@@ -804,7 +804,7 @@ local postog12 = Instance.new("UIStroke")
  ImageLabel.BorderSizePixel = 0
  ImageLabel.Position = UDim2.new(-0.018, 0,-0.252, 0)
  ImageLabel.Size = UDim2.new(0, 45,0, 45)
- ImageLabel.Image = "rbxassetid://11257882652"
+ ImageLabel.Image = "rbxassetid://12511245920"
  ImageLabel.ImageColor3 = Color3.fromRGB(224,224,224)
  
  Space.Name = "Space"
@@ -1155,7 +1155,7 @@ ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Position = UDim2.new(0, -5, 0, -5)
 ImageLabel.Size = UDim2.new(0, 45, 0, 45)
-ImageLabel.Image = "rbxassetid://11257882652"
+ImageLabel.Image = "rbxassetid://12511245920"
 ImageLabel.ImageColor3 = Color3.fromRGB(224,224,224)
 
 Space.Name = "Space"
@@ -9127,6 +9127,24 @@ Stats:Slider("Select Point",1,100,1,function(value)
 _G.Point = value
 return "Point : " .. tostring(value)
 end)
+
+Stats:Seperator("Fake Mode")
+	
+	Stats:Textbox("Fake Level",true,function(value)
+        game:GetService("Players").LocalPlayer.Data.Level.Value = value
+    end)
+    Stats:Textbox("Fake Exp",true,function(value)
+        game:GetService("Players").LocalPlayer.Data.Exp.Value = value
+    end)
+    Stats:Textbox("Fake Beli",true,function(value)
+        game:GetService("Players").LocalPlayer.Data.Beli.Value = value
+    end)
+    Stats:Textbox("Fake Points",true,function(value)
+        game:GetService("Players").LocalPlayer.Data.Points.Value = value
+    end)
+    Stats:Textbox("Fake Bounty",true,function(value)
+        game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value = value
+    end)
 
 P:Seperator(" Combats ")
 
